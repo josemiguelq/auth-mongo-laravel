@@ -16,6 +16,7 @@ class CreateNetworksTable extends Migration
         Schema::create('networks', function (Blueprint $table) {
             $table->index('id');
             $table->string('name');
+            $table->string('sub_division');
             $table->timestamps();
         });
     }

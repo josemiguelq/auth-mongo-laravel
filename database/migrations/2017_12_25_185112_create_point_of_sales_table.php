@@ -14,7 +14,12 @@ class CreatePointOfSalesTable extends Migration
     public function up()
     {
         Schema::create('point_of_sales', function (Blueprint $table) {
-            $table->increments('id');
+            $table->index('id');
+            $table->string('network_control_id');
+            $table->string('pos_name');
+            $table->string('area_code_prefix');
+            $table->string('lat');
+            $table->string('long');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreatePointOfSalesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('point_of_sales');
+        Schema::drop('point_of_sales');
     }
 }
