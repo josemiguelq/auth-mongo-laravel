@@ -167,7 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Moloquent\MongodbServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -203,7 +203,10 @@ return [
         'Cookie' => Illuminate\Support\Facades\Cookie::class,
         'Crypt' => Illuminate\Support\Facades\Crypt::class,
         'DB' => Illuminate\Support\Facades\DB::class,
-        'Eloquent' => Illuminate\Database\Eloquent\Model::class,
+
+        'Eloquent' => Jenssegers\Mongodb\Eloquent\Model::class,
+
+//        'Eloquent' => Illuminate\Database\Eloquent\Model::class,
         'Event' => Illuminate\Support\Facades\Event::class,
         'File' => Illuminate\Support\Facades\File::class,
         'Gate' => Illuminate\Support\Facades\Gate::class,
@@ -225,6 +228,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Moloquent' => Moloquent\Eloquent\Model::class,
 
     ],
 
