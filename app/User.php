@@ -2,15 +2,14 @@
 
 namespace App;
 
-use App\Http\ModelAbstract;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Auth\Authenticatable;
-use Jenssegers\Mongodb\Eloquent\Model as Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Notifications\Notifiable;
+
 //use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends ModelAbstract implements
@@ -18,7 +17,7 @@ class User extends ModelAbstract implements
     AuthorizableContract,
     CanResetPasswordContract
 {
-    use Authenticatable, Authorizable, CanResetPassword;
+    use Authenticatable, Authorizable, CanResetPassword, Notifiable;
 
     /**
      * The attributes that are mass assignable.

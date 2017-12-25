@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Moloquent\Eloquent\Builder;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        Builder::macro('getName', function () {
+            return 'mongodb';
+        });
     }
 }

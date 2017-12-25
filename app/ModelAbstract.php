@@ -6,7 +6,7 @@
  * Time: 09:07
  */
 
-namespace App\Http;
+namespace App;
 
 
 use Moloquent\Eloquent\Model as Eloquent;

@@ -12,9 +12,13 @@ class NetworkController extends Controller
         return $network = Network::all();
     }
 
-    public function store(){
+    public function show(){
 
         return $network = Network::all();
+    }
+
+    public function store(){
+
 
     }
 }
