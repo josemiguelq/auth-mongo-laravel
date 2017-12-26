@@ -168,6 +168,9 @@ return [
          * Package Service Providers...
          */
         Moloquent\MongodbServiceProvider::class,
+        Moloquent\Auth\PasswordResetServiceProvider::class,
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -204,9 +207,9 @@ return [
         'Crypt' => Illuminate\Support\Facades\Crypt::class,
         'DB' => Illuminate\Support\Facades\DB::class,
 
-        'Eloquent' => Jenssegers\Mongodb\Eloquent\Model::class,
+//        'Eloquent' => Jenssegers\Mongodb\Eloquent\Model::class,
 
-//        'Eloquent' => Illuminate\Database\Eloquent\Model::class,
+        'Eloquent' => Illuminate\Database\Eloquent\Model::class,
         'Event' => Illuminate\Support\Facades\Event::class,
         'File' => Illuminate\Support\Facades\File::class,
         'Gate' => Illuminate\Support\Facades\Gate::class,
@@ -229,6 +232,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Moloquent' => Moloquent\Eloquent\Model::class,
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
+
 
     ],
 
